@@ -1,0 +1,46 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import type { Project } from '../types';
+
+const entries = (await Astro.glob<Project>('./blog/**/*.md'))
+	.filter(({ frontmatter }) => !!frontmatter.publishDate)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+	);
+---
+
+<html lang="en">
+	<head>
+		<MainHead
+			title="All Projects | Iven Beck"
+			description="Learn about Iven Beck's most recent projects"
+		/>
+		<style>
+			.grid {
+				display: grid;
+				grid-gap: 3rem;
+			}
+			.title {
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+			}
+			.wrapper {
+				width: 80%;
+			}
+		</style>
+	</head>
+	<body>
+		<Nav />
+		<div class="wrapper">
+			<h1 class="title">All Projects</h1>
+			<div class="grid">
+				{entries.map((project) => <PortfolioPreview project={project} />)}
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>
