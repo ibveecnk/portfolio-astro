@@ -1,9 +1,9 @@
 ---
-layout: ../../layouts/project.astro
+layout: ../../layouts/blog.astro
 title: BOGY internship at UEBERBIT
 client: Self
 publishDate: 2022-01-28
-img: https://images.unsplash.com/photo-1547234935-80c7145ec969?fit=crop&w=1400&h=700&q=75
+img: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffj-employer-blog.s3.amazonaws.com%2Femployer-blog%2Fwp-content%2Fuploads%2F2017%2F01%2F24041640%2FWays-To-Create-a-More-Flexible-Work-Environment.jpg&f=1&nofb=1&ipt=bde1ec2c803e6d04e264871f6a38e4b2d38f0d56c98cf134d0d52a6890753990&ipo=images
 description: |
   About my BOGY internship
 tags:

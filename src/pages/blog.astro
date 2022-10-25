@@ -16,8 +16,8 @@ const entries = (await Astro.glob<Project>('./blog/**/*.md'))
 <html lang="en">
 	<head>
 		<MainHead
-			title="All Projects | Iven Beck"
-			description="Learn about Iven Beck's most recent projects"
+			title="All Entries | Iven Beck"
+			description="Learn about Iven Beck's most recent entries"
 		/>
 		<style>
 			.grid {
@@ -36,9 +36,9 @@ const entries = (await Astro.glob<Project>('./blog/**/*.md'))
 	<body>
 		<Nav />
 		<div class="wrapper">
-			<h1 class="title">All Projects</h1>
+			<h1 class="title">Blog</h1>
 			<div class="grid">
-				{entries.map((project) => <PortfolioPreview project={project} />)}
+				{entries.map((entry) => <PortfolioPreview project={entry} />)}
 			</div>
 		</div>
 		<Footer />

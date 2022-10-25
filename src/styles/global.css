@@ -3,6 +3,7 @@
   /* Colors */
   --c-black: #05091e;
   --c-blue: #46b4ff;
+  --c-darkgray: #0b143d;
   --c-gray: #90aab7;
   --c-green: #9ef2cb;
   --c-pink: #ffb8d9;
@@ -48,8 +49,9 @@
   --f-d17: 0.10049617492923625em;
   --f-d18: 0.0877914951989026em;
 
-  --t-fg: var(--c-black);
-  --t-bg: var(--c-white);
+  --t-fg: var(--c-white);
+  --t-bg: var(--c-black);
+  --t-card: var(--c-darkgray);
   --t-subdue: var(--c-gray);
   --t-active: var(--c-blue);
 }
@@ -60,6 +62,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  background-color: var(--t-bg);
 }
 
 body {
@@ -91,10 +94,11 @@ h1 {
 
 .button {
   display: inline-block;
-  border: 3px solid currentColor;
+  border: 1px solid currentColor;
   padding: 0.5em 1em;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 1em 0;
 }
 
 .wrapper {

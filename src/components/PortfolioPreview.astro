@@ -32,9 +32,8 @@ const { frontmatter, url } = Astro.props.project;
 <style>
 	.card {
 		position: relative;
-		color: var(--t-bg);
-		background: var(--t-fg);
-		border: 1px solid #f0f0f0;
+		color: var(--t-fg);
+		background: var(--t-card);
 	}
 
 	.title {
@@ -83,7 +82,7 @@ const { frontmatter, url } = Astro.props.project;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		color: var(--t-bg);
+		color: var(--t-fg);
 		font-size: var(--f-u2);
 		font-weight: 700;
 		background: rgba(0, 0, 0, 0.25);
