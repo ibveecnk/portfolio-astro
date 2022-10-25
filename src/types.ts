@@ -1,4 +1,4 @@
-export interface Project {
+export interface BlogPost {
 	title: string;
 	client: string;
 	description: string;
