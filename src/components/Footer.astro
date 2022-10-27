@@ -3,7 +3,7 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  &copy; {currentYear} Iven Beck
+  <small>&copy; {currentYear} Iven Beck</small>
   <small class="byline"
     >🚀 Built with <a
       href="https://astro.build/"
@@ -15,16 +15,13 @@ const currentYear = new Date().getFullYear();
 <style>
   footer {
     text-align: center;
-    padding-top: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 2rem;
+    padding: 1rem 0;
     background-color: var(--t-card);
   }
 
   .byline {
     display: block;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     color: var(--t-subdue);
     font-size: var(--f-d2);
     text-transform: uppercase;

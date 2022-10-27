@@ -1,10 +1,10 @@
 ---
-layout: ../../layouts/blog.astro
+layout: ../../layouts/l_blog.astro
 title: Internship at UEBERBIT
 client: Self
 publishDate: 2022-10-25
 description: |
-  About my first ever internship
+  About my BOGY-Internship
 tags:
   - internship
   - web-development

@@ -21,7 +21,7 @@ const { content } = Astro.props;
         background-color: var(--t-fg);
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 25vw;
+        min-height: 10vw;
         color: white;
         flex-direction: column;
         align-items: center;
@@ -89,12 +89,22 @@ const { content } = Astro.props;
         margin: auto;
       }
 
-      .wrapper {
-        margin-top: 1em;
+      .contentWrapper {
+        text-align: justify;
       }
 
       .readMore {
         text-align: center;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: var(--t-card);
+        border-radius: 7px;
+        padding: 0.5em 1em;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 1em 0;
       }
     </style>
   </head>
@@ -112,7 +122,7 @@ const { content } = Astro.props;
         <div>{new Date(content.publishDate).toLocaleDateString("de-DE")}</div>
       </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper contentWrapper">
       <div class="content"><slot /></div>
     </div>
     <div class="readMore">
