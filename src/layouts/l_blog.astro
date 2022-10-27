@@ -29,12 +29,6 @@ const { content } = Astro.props;
         font-size: var(--f-u4);
       }
 
-      @media (min-width: 750px) {
-        .hero {
-          padding: 2rem;
-        }
-      }
-
       .tag {
         margin-left: 0.5em;
         margin-right: 0.5em;
@@ -55,7 +49,7 @@ const { content } = Astro.props;
       }
 
       .title {
-        font-size: var(--f-u5);
+        font-size: var(--f-u2);
         font-weight: 900;
         text-transform: uppercase;
         letter-spacing: 0.0625em;
@@ -64,12 +58,12 @@ const { content } = Astro.props;
 
       @media (min-width: 750px) {
         .title {
-          font-size: var(--f-u7);
+          font-size: var(--f-u5);
         }
       }
 
       .leadIn {
-        padding: 1em 0;
+        padding: 0.5em 0;
         color: var(--t-fg);
         background-color: var(--t-card);
         text-align: center;
@@ -85,12 +79,14 @@ const { content } = Astro.props;
       .content {
         font-size: var(--f-u1);
         line-height: 2.2;
-        max-width: 50em;
+        max-width: 60em;
         margin: auto;
       }
 
       .contentWrapper {
         text-align: justify;
+        margin: 0 2rem;
+        max-width: none;
       }
 
       .readMore {
