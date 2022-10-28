@@ -133,6 +133,10 @@ main {
   margin: 0 1.5rem;
 }
 
+.MathJax > svg {
+  max-width: 100%;
+}
+
 .wrapper {
   max-width: 80em;
   height: 100%;
