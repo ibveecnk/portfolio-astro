@@ -102,28 +102,34 @@ const { content } = Astro.props;
         text-transform: uppercase;
         margin: 1em 0;
       }
+
+      main {
+        margin: 0 0;
+      }
     </style>
   </head>
   <body>
     <Nav />
-    <header style={`background-color:${content.bgcolor}`} class="hero">
-      <h1 style={`color:${content.textcolor}`} class="title">
-        {content.title}
-      </h1>
-    </header>
-    <div class="leadIn">
-      <div class="wrapper">
-        <div>{content.tags.map((t) => <span class="tag">{t}</span>)}</div>
-        <h3 class="tagline">{content.description}</h3>
-        <div>{new Date(content.publishDate).toLocaleDateString("de-DE")}</div>
+    <main>
+      <header style={`background-color:${content.bgcolor}`} class="hero">
+        <h1 style={`color:${content.textcolor}`} class="title">
+          {content.title}
+        </h1>
+      </header>
+      <div class="leadIn">
+        <div class="wrapper">
+          <div>{content.tags.map((t) => <span class="tag">{t}</span>)}</div>
+          <h3 class="tagline">{content.description}</h3>
+          <div>{new Date(content.publishDate).toLocaleDateString("de-DE")}</div>
+        </div>
       </div>
-    </div>
-    <div class="wrapper contentWrapper">
-      <div class="content"><slot /></div>
-    </div>
-    <div class="readMore">
-      <a href="/blog" class="button">View More Posts</a>
-    </div>
+      <div class="wrapper contentWrapper">
+        <div class="content"><slot /></div>
+      </div>
+      <div class="readMore">
+        <a href="/blog" class="button">View More Posts</a>
+      </div>
+    </main>
     <Footer />
   </body>
 </html>
