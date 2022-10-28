@@ -91,12 +91,6 @@ import Footer from "../components/Footer.astro";
         grid-gap: 2rem;
       }
 
-      @media (min-width: 1200px) {
-        .grid {
-          grid-template-columns: 2fr 1fr;
-        }
-      }
-
       .sectionTitle {
         font-weight: 700;
         font-size: var(--f-u8);
@@ -189,6 +183,23 @@ import Footer from "../components/Footer.astro";
         text-align: center;
         margin-top: 2em;
       }
+
+      .card {
+        position: relative;
+        color: var(--t-fg);
+        background: var(--t-card);
+        justify-self: center;
+        margin: 1rem 0;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: var(--t-card);
+        border-radius: 7px;
+        padding: 0.5em 1em;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body>
@@ -196,8 +207,13 @@ import Footer from "../components/Footer.astro";
     <main>
       <div class="overlay">
         <h1 class="title">
-          <small class="subtitle">The personal portfolio of</small>Iven Beck
+          <small class="subtitle">The personal website of</small>Iven Beck
         </h1>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <a class="button" href="/blog"> Visit my blog</a>
+        </div>
       </div>
     </main>
     <Footer />

@@ -8,7 +8,7 @@ description: |
 tags:
   - test
 featured: true
-bgcolor: "#101010"
+bgcolor: "#202020"
 textcolor: "#ffffff"
 ---
 
