@@ -6,8 +6,7 @@ publishDate: 2022-10-24
 description: |
   This is a test of my markdown implementation
 tags:
-  - internship
-  - web-development
+  - test
 featured: true
 bgcolor: "#101010"
 textcolor: "#ffffff"
