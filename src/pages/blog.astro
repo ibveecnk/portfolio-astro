@@ -6,7 +6,7 @@ import PortfolioPreview from "../components/PortfolioPreview.astro";
 import type { BlogPost } from "../types";
 
 const entries = (await Astro.glob<BlogPost>("./blog/**/*.md"))
-  .filter(({ frontmatter }) => !!frontmatter.publishDate)
+  .filter(({ frontmatter }) => !!frontmatter.publishDate && !frontmatter.draft)
   .sort(
     (a, b) =>
       new Date(b.frontmatter.publishDate).valueOf() -

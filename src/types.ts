@@ -10,4 +10,5 @@ export interface BlogPost {
 	tags: string[];
 	bgcolor: RGB | RGBA | HEX;
 	textcolor: RGB | RGBA | HEX;
+	draft: boolean;
 }
