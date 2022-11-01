@@ -3,27 +3,32 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <small>&copy; {currentYear} Iven Beck</small>
+  <small class="byline">&copy;{currentYear} Iven Beck</small>
   <small class="byline"
     >🚀 Built with <a
       href="https://astro.build/"
       target="_blank"
       rel="noopener noreferrer">Astro</a
+    > hosted by <a
+      href="https://vercel.com/"
+      target="_blank"
+      rel="noopener noreferrer">Vercel</a
     >
   </small>
-</footer>
-<style>
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: var(--t-card);
-  }
+</footer><small class="byline">
+  <style>
+    footer {
+      text-align: center;
+      padding: 0.25rem 0;
+      background-color: var(--t-card);
+    }
 
-  .byline {
-    display: block;
-    margin-top: 0.5rem;
-    color: var(--t-subdue);
-    font-size: var(--f-d2);
-    text-transform: uppercase;
-  }
-</style>
+    .byline {
+      display: block;
+      margin-top: 0.25rem;
+      color: var(--t-subdue);
+      font-size: var(--f-d2);
+      text-transform: uppercase;
+    }
+  </style>
+</small>
