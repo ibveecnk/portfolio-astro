@@ -1,8 +1,27 @@
+---
+type NavItem = {
+  Name: string;
+  URL: string;
+};
+const links: NavItem[] = [
+  {
+    Name: "Blog",
+    URL: "/blog",
+  },
+];
+---
+
 <nav>
   <a class="link" href="/">
     <div class="monogram">IB</div>
   </a>
-  <a class="link" href="/blog/"> Blog</a>
+  {
+    links.map((link) => (
+      <a class="link" href={link.URL}>
+        {link.Name}
+      </a>
+    ))
+  }
   <!--
 	<a class="link" href="/about/"> About</a>
 	 -->
@@ -61,6 +80,7 @@
     align-items: center;
     padding: 0.5rem;
     background-color: var(--t-card);
+    padding: 0 1rem;
   }
 
   .link {
