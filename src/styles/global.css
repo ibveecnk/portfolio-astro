@@ -98,7 +98,7 @@ li {
 }
 
 a {
-  color: var(--c-orange);
+  color: var(--t-fg);
   text-decoration: none;
   transition: color 0.4s ease;
 }
@@ -130,7 +130,7 @@ code > span::before {
 
 main {
   flex: 1;
-  margin: 0 1.5rem;
+  margin: 1rem 1.5rem;
 }
 
 .MathJax > svg {

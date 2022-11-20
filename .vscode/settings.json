@@ -1,11 +1,12 @@
 {
-    "cSpell.words": [
-        "astro",
-        "bgcolor",
-        "mathjax",
-        "rehype",
-        "textcolor",
-        "tsconfigs",
-        "UEBERBIT"
-    ]
+  "cSpell.words": [
+    "astro",
+    "bgcolor",
+    "mathjax",
+    "rehype",
+    "textcolor",
+    "tsconfigs",
+    "UEBERBIT"
+  ],
+  "explorer.excludeGitIgnore": false
 }

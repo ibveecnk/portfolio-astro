@@ -27,7 +27,7 @@ const { frontmatter, url } = Astro.props.project;
         ))
       }
     </div>
-    <a class="link" href={url}>
+    <a rel="prefetch" class="link" href={url}>
       <span
         class="linkInner"
         style={`color:${frontmatter.textcolor}; border-color:${frontmatter.textcolor}`}
