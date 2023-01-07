@@ -1,0 +1,61 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import Timeline from "../components/Timeline.astro";
+---
+
+<html lang="en">
+    <head>
+        <MainHead
+            title="Iven Beck: Education"
+            description="Iven Beck: Developer"
+        />
+    </head>
+    <body>
+        <Nav />
+        <main>
+            <Timeline
+                items={[
+                    {
+                        name: "Test",
+                        description: "abc",
+                        start: new Date(),
+                        end: null,
+                    },
+                    {
+                        name: "Test2",
+                        description: "abc",
+                        start: new Date("01-01-2020"),
+                        end: new Date("10-21-2021"),
+                    },
+                    {
+                        name: "Test",
+                        description: "abc",
+                        start: new Date(),
+                        end: null,
+                    },
+                    {
+                        name: "Test2",
+                        description: "abc",
+                        start: new Date("01-01-2020"),
+                        end: new Date("10-21-2021"),
+                    },
+                    {
+                        name: "Test",
+                        description: "abc",
+                        start: new Date(),
+                        end: null,
+                    },
+                    {
+                        name: "Test2",
+                        description: "abc",
+                        start: new Date("01-01-2020"),
+                        end: new Date("10-21-2021"),
+                    },
+                ]}
+            />
+        </main>
+        <Footer />
+    </body>
+</html>

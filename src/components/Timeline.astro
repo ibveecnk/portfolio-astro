@@ -1,0 +1,49 @@
+---
+interface Item {
+    name: string;
+    description: string;
+    start: Date;
+    end: Date | null;
+}
+
+interface Props {
+    items: Item[];
+}
+const { items } = Astro.props;
+const sortedItems = items.sort((a, b) => b.start.getTime() - a.start.getTime());
+---
+
+<div class="timeline flex-row flex-wrap">
+    {
+        sortedItems.map((i) => {
+            return (
+                <div class="card h-fit grow">
+                    <div class="font-bold text-2xl">{i.name}</div>
+                    <div class="description text-sm">{i.description}</div>
+                    <div class="datespan text-sm">
+                        {i.start.toLocaleDateString("de")} -{" "}
+                        {(i.end && i.end.toLocaleDateString("de")) || "today"}
+                    </div>
+                </div>
+            );
+        })
+    }
+</div>
+
+<style>
+    .timeline {
+        display: flex;
+    }
+    .card {
+        padding: 1rem;
+        margin: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        background: var(--t-bg);
+        transition: all 0.2s ease-in-out;
+    }
+    .card:hover {
+        background: var(--t-card);
+        transition: all 0.2s ease-in-out;
+    }
+</style>
